@@ -32,3 +32,4 @@ def get_team(team_id):
     url = __url + 'teams/' + str(team_id)
     r = requests.get(url)
     return r.json()
+//os.system('afplay /System/Library/Sounds/Sosumi.aiff')
