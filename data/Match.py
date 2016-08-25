@@ -3,7 +3,7 @@ import time
 
 class Match:
     def __init__(self, json):
-        self.competitionLink = json['_links']['competition']['href']
+        self.competitionLink = json['_links']['soccerseason']['href']
         self.matchLink = json['_links']['self']['href']
         self.homeTeamName = json['homeTeamName']
         self.awayTeamName = json['awayTeamName']
@@ -11,7 +11,6 @@ class Match:
         self.awayTeamGoals = json['result']['goalsAwayTeam']
         self.date = json['date']
         self.status = json['status']
-        self.odds = json['odds']
 
     def __str__(self):
         return (str)(self.calculateMinutes()) + '   ' + self.homeTeamName + '  ' + \
@@ -37,7 +36,6 @@ class Match:
         newHomeGoals = json['result']['goalsHomeTeam']
         newAwayGoals = json['result']['goalsAwayTeam']
         self.status = json['status']
-        self.odds = json['odds']
         strToReturn = ''
         if self.homeTeamGoals != newHomeGoals:
             strToReturn += self.homeTeamName + ' scores in ' + \
