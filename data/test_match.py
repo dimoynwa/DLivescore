@@ -1,5 +1,5 @@
 import unittest
-from data import Match
+from match import Match
 
 class TestMatch(unittest.TestCase):
     def setUp(self):
@@ -37,7 +37,7 @@ class TestMatch(unittest.TestCase):
 
     def test_calculate_minutes(self):
         mins = self.match.calculateMinutes()
-        assertEquals(mins, '18:00')
+        self.assertEqual(mins, '18:00')
 
 
 if __name__ == '__main__':

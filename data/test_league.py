@@ -1,5 +1,5 @@
 import unittest
-from League import League
+from league import League
 
 class TestLeague(unittest.TestCase):
     def setUp(self):

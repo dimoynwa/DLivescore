@@ -1,5 +1,5 @@
 import unittest
-from Team import Team
+from team import Team
 
 class TestTeam(unittest.TestCase):
     def setUp(self):
